@@ -1,6 +1,10 @@
 import { DATA } from "@/data/resume";
 
 export function PersonSchema() {
+  const socialUrls = Object.values(DATA.contact.social)
+    .filter((s) => s.navbar !== false)
+    .map((s) => s.url);
+
   return (
     <script
       type="application/ld+json"
@@ -8,34 +12,18 @@ export function PersonSchema() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
-          name: "Prasenjit Nayak",
-          alternateName: ["Prasen", "Star Knight"],
+          name: DATA.name,
           description: DATA.description,
-          image: `${DATA.url}/me.png`,
+          image: `${DATA.url}${DATA.avatarUrl}`,
           url: DATA.url,
-          sameAs: [
-            DATA.contact.social.GitHub.url,
-            DATA.contact.social.LinkedIn.url,
-            DATA.contact.social.X.url,
-            DATA.contact.social.Youtube.url,
-            DATA.contact.social.CodePen.url,
-          ],
-          jobTitle: "Full Stack Developer",
-          worksFor: {
-            "@type": "Organization",
-            name: "Freelance"
-          },
-          alumniOf: {
-            "@type": "CollegeOrUniversity",
-            name: "Trident Academy Of Technology"
-          },
+          sameAs: socialUrls,
+          jobTitle: "Developer",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Odisha",
-            addressCountry: "India"
+            addressCountry: "Ethiopia"
           },
           email: DATA.contact.email,
-          knowsAbout: DATA.skills
+          knowsAbout: DATA.skills.map((s) => s.name),
         })
       }}
     />

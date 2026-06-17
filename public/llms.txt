@@ -13,6 +13,7 @@ Prasenjit Nayak is a Full Stack Developer from Odisha, India, specializing in Re
 - [Projects](https://prasen.dev/projects): Web applications and open source projects.
 - [Videos](https://prasen.dev/videos): YouTube videos about software development and technology.
 - [Gadgets](https://prasen.dev/gadgets): Developer tech setup, PC components, and productivity tools.
+- [Promote](https://sanyi.dev/promote): Sponsorship and partnership packages for tech brands across LinkedIn, X, and YouTube.
 
 ## Key Projects
 
@@ -25,8 +26,8 @@ Prasenjit Nayak is a Full Stack Developer from Odisha, India, specializing in Re
 
 Languages: TypeScript, JavaScript, Python
 Frontend: React, Next.js, TailwindCSS, Framer Motion
-Backend: Node.js, MongoDB, PostgreSQL, Redis
-Tools: Git, Docker, Cursor, Claude
+Backend: Node.js, MongoDB, PostgreSQL, GOLANG
+Tools: Git, Cursor, Claude
 
 ## Social
 

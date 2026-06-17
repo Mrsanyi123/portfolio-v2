@@ -9,19 +9,19 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Videos",
-  description: "Watch my latest videos about software development, coding tutorials, and technology by Prasenjit Nayak.",
+  description: "Watch Sanyi's latest videos about software development, coding tutorials, and technology.",
   alternates: {
     canonical: `${DATA.url}/videos`,
   },
   openGraph: {
-    title: "Videos | Prasenjit Nayak",
+    title: "Videos | Sanyi",
     description: "Software development videos, coding tutorials, and technology content.",
     url: `${DATA.url}/videos`,
     images: [{ url: `${DATA.url}/api/og?title=Videos&type=page`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Videos | Prasenjit Nayak",
+    title: "Videos | Sanyi",
     description: "Software development videos, coding tutorials, and technology content.",
     images: [`${DATA.url}/api/og?title=Videos&type=page`],
   },

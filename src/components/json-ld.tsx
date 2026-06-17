@@ -1,61 +1,33 @@
+import { DATA } from "@/data/resume";
+
 export function JsonLd() {
+  const socialUrls = Object.values(DATA.contact.social).map((s) => s.url);
+
   const structuredData = [{
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://prasen.dev/#person',
-    name: 'Prasenjit Nayak',
-    givenName: 'Prasenjit',
-    familyName: 'Nayak',
-    url: 'https://prasen.dev',
-    image: 'https://prasen.dev/prasen.webp',
-    jobTitle: 'Full Stack Developer',
+    '@id': `${DATA.url}/#person`,
+    name: DATA.name,
+    url: DATA.url,
+    image: `${DATA.url}${DATA.avatarUrl}`,
+    jobTitle: 'Developer',
     nationality: {
       '@type': 'Country',
-      name: 'India'
+      name: 'Ethiopia'
     },
-    alumniOf: {
-      '@type': 'EducationalOrganization',
-      name: 'Trident Academy of Technology',
-      url: 'https://tat.ac.in'
-    },
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Freelance'
-    },
-    sameAs: [
-      'https://github.com/StarKnightt',
-      'https://www.linkedin.com/in/prasenjitnayak/',
-      'https://twitter.com/Star_Knight12',
-      'https://youtube.com/@Star_Knight12',
-      'https://www.instagram.com/starknight_143/',
-      'https://codepen.io/StarKnightt',
-      'https://learn.prasen.dev'
-    ],
-    knowsAbout: [
-      'Web Development',
-      'React',
-      'Next.js',
-      'TypeScript',
-      'Node.js',
-      'Full Stack Development',
-      'MongoDB',
-      'TailwindCSS',
-      'PostgreSQL',
-      'REST APIs',
-      'AI Integration'
-    ],
-    knowsLanguage: ['English', 'Hindi', 'Odia'],
-    description: 'Full Stack Developer specializing in React, Next.js, TypeScript, and Node.js. Building modern web applications and open-source tools.'
+    sameAs: socialUrls,
+    knowsAbout: DATA.skills.map((s) => s.name),
+    description: DATA.description,
   },
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://prasen.dev/#website',
-    name: 'Prasenjit Nayak - Full Stack Developer',
-    url: 'https://prasen.dev',
-    description: 'Portfolio of Prasenjit Nayak - Full Stack Developer specializing in React, Next.js, and TypeScript',
+    '@id': `${DATA.url}/#website`,
+    name: `${DATA.name} - Portfolio`,
+    url: DATA.url,
+    description: DATA.description,
     publisher: {
-      '@id': 'https://prasen.dev/#person'
+      '@id': `${DATA.url}/#person`
     }
   },
   {
@@ -67,30 +39,16 @@ export function JsonLd() {
         '@type': 'ListItem',
         position: 1,
         name: 'Projects',
-        description: 'Web applications and open source projects built with React, Next.js, and TypeScript',
-        url: 'https://prasen.dev/projects'
+        description: 'Web applications and projects',
+        url: `${DATA.url}/projects`
       },
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Blog',
-        description: 'Technical articles about web development, React, and software engineering',
-        url: 'https://prasen.dev/blog'
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
         name: 'Videos',
-        description: 'YouTube videos about software development, coding tutorials, and tech',
-        url: 'https://prasen.dev/videos'
+        description: 'Videos about software development and tech',
+        url: `${DATA.url}/videos`
       },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'Gadgets',
-        description: 'Tech setup, PC components, and productivity tools I use daily',
-        url: 'https://prasen.dev/gadgets'
-      }
     ]
   }];
 

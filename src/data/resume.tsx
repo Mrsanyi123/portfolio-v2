@@ -1,20 +1,50 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, VideoIcon, FolderIcon, Settings, Wrench, Zap } from "lucide-react";
-import { faReact, faNodeJs, faGitAlt, faTypescript, faTailwindCss, faDocker, faFigma, faGithub, faFirefoxBrowser, faBrave, faNotion, faPython, faJava, faJs, faHtml5, faCss3Alt } from "@fortawesome/free-brands-svg-icons";
-import { faLeaf, faPlug, faBolt, faTerminal, faRocket, faServer, faDatabase, faCode } from "@fortawesome/free-solid-svg-icons";
+import { HomeIcon, VideoIcon, FolderIcon, MegaphoneIcon } from "lucide-react";
+import {
+  faReact,
+  faNodeJs,
+  faGitAlt,
+  faTypescript,
+  faTailwindCss,
+  faFigma,
+  faGithub,
+  faFirefoxBrowser,
+  faBrave,
+  faNotion,
+  faPython,
+  faJava,
+  faJs,
+  faHtml5,
+  faCss3Alt,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faLeaf,
+  faPlug,
+  faBolt,
+  faTerminal,
+  faRocket,
+  faServer,
+  faDatabase,
+  faCode,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const DATA = {
-  name: "Prasenjit Nayak",
-  initials: "PN",
-  url: "https://www.prasen.dev",
-  location: "Odisha, India",
-  locationLink: "https://www.google.com/maps/place/odisha",
-  description:
-    "",
+  name: "Sanyi",
+  initials: "S",
+  url: "https://sanyi.dev",
+  location: "Addis Ababa, Ethiopia",
+  locationLink: "https://www.google.com/maps/place/addis+ababa",
+  description: "",
+  heroIntro: [
+    "Currently freelancing and collaborating with new people on exciting projects.",
+    "I love playing video games and share thoughts on tech here.",
+    "Here's what I think about the future of computer science.",
+    "I also enjoy touch typing in my free time, bullish on AI and future technologies.",
+  ],
   summary:
-    "Currently **freelancing** and **collaborating** with new people on exciting projects.\n\nI love playing [video games](https://www.youtube.com/@StarKnight-12) and share thoughts on tech [here](https://www.youtube.com/@Star_Knight12).\n\nHere's what I think about the [future of computer science](https://www.prasen.dev/blog/hello-world).\n\nI also enjoy [touch typing](https://monkeytype.com/profile/prasenj4551R) in my free time, bullish on AI and future technologies",
+    "I'm **Sanyi** — a 16-year-old developer and founder focused on turning ideas into real, impactful products. I'm driven by curiosity and a strong belief that technology can solve everyday problems at scale.\n\nI spend most of my time building, experimenting, and improving my skills — especially in AI, problem solving, and scalable systems. Beyond coding, I'm a tech content creator with a **40K+** audience on LinkedIn, YouTube, and X.\n\nCurrently building **Shiplog** and **YScroll**.",
 
-  avatarUrl: "/prasen.webp",
+  avatarUrl: "/sanyi.jpg",
   skills: [
     { name: "TypeScript", icon: faTypescript, category: "Languages" },
     { name: "JavaScript", icon: faJs, category: "Languages" },
@@ -22,180 +52,206 @@ export const DATA = {
     { name: "React", icon: faReact, category: "Frontend" },
     { name: "Next.js", customIcon: Icons.nextjs, category: "Frontend" },
     { name: "TailwindCSS", icon: faTailwindCss, category: "Frontend" },
-    { name: "Framer Motion", icon: faBolt, category: "Frontend" },
+    { name: "React Native", icon: faReact, category: "Mobile" },
     { name: "Node.js", icon: faNodeJs, category: "Backend" },
-    { name: "MongoDB", icon: faLeaf, category: "Backend" },
+    { name: "FastAPI", icon: faBolt, category: "Backend" },
     { name: "PostgreSQL", icon: faDatabase, category: "Backend" },
-    { name: "Redis", icon: faDatabase, category: "Backend" },
+    { name: "Groq AI", customIcon: Icons.claude, category: "AI" },
     { name: "Git", icon: faGitAlt, category: "Tools" },
-    { name: "Docker", icon: faDocker, category: "Tools" },
+    { name: "Figma", icon: faFigma, category: "Tools" },
     { name: "Cursor", customIcon: Icons.cursor, category: "Tools" },
     { name: "Claude", customIcon: Icons.claude, category: "Tools" },
   ],
-  setup: [
-    {
-      title: "Gears Used",
-      description: "Productivity tools and gadgets I use daily.",
-      href: "/gadgets",
-      icon: Settings,
-    },
-    {
-      title: "Tools I Use",
-      description: "Software and apps I code with daily.",
-      href: "/gadgets#tools",
-      icon: Wrench,
-    },
+  linkedInPosts: [
+    "urn:li:ugcPost:7429205991805755392",
+    "urn:li:ugcPost:7361024281008402436",
+    "urn:li:activity:7433016280657543169",
+  ],
+  xPosts: [
+    "2038632738677313792",
+    "2023435106585837840",
+    "2025944415227854909",
+    "2027249562507747797",
   ],
   tools: [
     {
       name: "Cursor",
-      description: "AI-powered code editor built on VS Code — my primary IDE for all projects.",
+      description:
+        "AI-powered code editor built on VS Code — my primary IDE for all projects.",
       href: "https://cursor.com/referral?code=63BS4MRLZQQV",
       customIcon: Icons.cursor,
     },
     {
       name: "VS Code",
-      description: "The classic. I still use it for quick edits and when I need specific extensions.",
+      description:
+        "The classic. I still use it for quick edits and when I need specific extensions.",
       href: "https://code.visualstudio.com",
       customIcon: Icons.vscode,
     },
     {
       name: "Git Bash",
-      description: "My go-to terminal on Windows for all git operations and shell scripting.",
+      description:
+        "My go-to terminal on Windows for all git operations and shell scripting.",
       href: "https://gitforwindows.org",
       icon: faTerminal,
     },
     {
       name: "Postman",
-      description: "API testing and documentation — essential for building and debugging REST APIs.",
+      description:
+        "API testing and documentation — essential for building and debugging REST APIs.",
       href: "https://www.postman.com",
       icon: faRocket,
     },
-    {
-      name: "Docker",
-      description: "Containerization for consistent dev environments and easy deployments.",
-      href: "https://www.docker.com",
-      icon: faDocker,
-    },
+
     {
       name: "Hostinger",
-      description: "Reliable and affordable hosting for my projects and client sites.",
+      description:
+        "Reliable and affordable hosting for my projects and client sites.",
       href: "https://www.hostinger.com/in?REFERRALCODE=NP4PRASENELF",
       icon: faServer,
     },
     {
       name: "Firefox",
-      description: "Privacy-first browser I use for everyday browsing and web development.",
+      description:
+        "Privacy-first browser I use for everyday browsing and web development.",
       href: "https://www.mozilla.org/firefox",
       icon: faFirefoxBrowser,
     },
     {
       name: "Brave",
-      description: "Fast, ad-free browser — my secondary pick for a clean browsing experience.",
+      description:
+        "Fast, ad-free browser — my secondary pick for a clean browsing experience.",
       href: "https://brave.com",
       icon: faBrave,
     },
     {
       name: "Figma",
-      description: "Design tool for UI mockups, prototyping, and collaborating on layouts.",
+      description:
+        "Design tool for UI mockups, prototyping, and collaborating on layouts.",
       href: "https://www.figma.com",
       icon: faFigma,
     },
     {
       name: "GitHub",
-      description: "Where all my code lives — version control, CI/CD, and open source contributions.",
+      description:
+        "Where all my code lives — version control, CI/CD, and open source contributions.",
       href: "https://github.com",
       icon: faGithub,
     },
     {
       name: "Vercel",
-      description: "One-click deploys for all my Next.js apps with instant previews.",
+      description:
+        "One-click deploys for all my Next.js apps with instant previews.",
       href: "https://vercel.com",
       icon: faRocket,
     },
     {
       name: "Notion",
-      description: "Notes, task management, and documentation — my second brain.",
+      description:
+        "Notes, task management, and documentation — my second brain.",
       href: "https://www.notion.so",
       icon: faNotion,
     },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/videos", icon: VideoIcon, label: "Videos" },
     { href: "/projects", icon: FolderIcon, label: "Projects" },
-    { href: "/gadgets", icon: Icons.shop, label: "Gadgets" },
+    { href: "/promote", icon: MegaphoneIcon, label: "Promote" },
   ],
+  partnerships: {
+    intro:
+      "If you want to place your product directly in front of an engaged, 40K high-trust B2B and tech audience, let's work together.",
+    packages: [
+      {
+        name: "The Creator Demo Pack",
+        emoji: "📦",
+        description:
+          "Best for brands looking to tap directly into a premium B2B network.",
+        price: "$399",
+        platforms: "LinkedIn Only (30K+ Followers)",
+        platformList: ["LinkedIn"],
+        featured: false,
+        includes: [
+          "1× LinkedIn native post featuring either a personal photo of me using your software or a 30-to-60-second screen-share demo walkthrough.",
+          "Direct product link tagging.",
+        ],
+      },
+      {
+        name: "The Full-Stack Ecosystem",
+        emoji: "💎",
+        description:
+          "The ultimate multi-platform blitz to maximize reach and search visibility.",
+        price: "$699",
+        platforms: "LinkedIn, X, & YouTube (42K+ Total Audience)",
+        platformList: ["LinkedIn", "X", "YouTube"],
+        featured: true,
+        includes: [
+          "LinkedIn (30K+): 1× walkthrough demo video or personal photo post.",
+          "X / Twitter (5.7K): 1× narrative post or thread contextually linking to your product.",
+          "YouTube (6.6K): 1× 30-to-60-second mid-roll video integration embedded inside a long-form tech video or tutorial.",
+        ],
+      },
+    ],
+    guidelines: [
+      {
+        title: "Niche Alignment Only",
+        description:
+          "I only accept tech-focused products. This includes B2B SaaS, B2C software, developer tools, and mobile/desktop apps.",
+      },
+      {
+        title: "Strict Exclusions",
+        description:
+          "I do not accept sponsorships for crypto, web3, personal finance, betting, gambling, or dating platforms.",
+      },
+      {
+        title: "Hands-On Testing",
+        description:
+          "I require a working account, demo login, or free trial access to your tool before finalizing the contract. I must test and genuinely approve of the product myself before recommending it to my audience.",
+      },
+      {
+        title: "YouTube Revision Policy",
+        description:
+          "For the $699 package, the YouTube integration includes one (1) round of script/video edits before the video goes live.",
+      },
+      {
+        title: "Integration vs. Dedicated",
+        description:
+          "YouTube placements are structured as seamless mid-roll video integrations (30–60 seconds) within my standard high-quality content, not fully dedicated videos.",
+      },
+    ],
+    paymentTerms: [
+      {
+        title: "50/50 Model",
+        description:
+          "All campaigns follow a 50/50 payment split — 50% due upfront upon contract signing, and 50% due upon publication of all deliverables.",
+      },
+    ],
+  },
   contact: {
-    email: "prasen.nayak@hotmail.com",
+    email: "hello@sanyi.dev",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/StarKnightt",
+        url: "https://github.com/mrsanyi123",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/prasenjitnayak/",
+        url: "https://www.linkedin.com/in/sanyi-diriba/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com/Star_Knight12",
+        url: "https://x.com/imsanyidiriba",
         icon: Icons.x,
-
         navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://youtube.com/@Star_Knight12",
-        icon: Icons.youtube,
-        navbar: true,
-      },
-      Instagram: {
-        name: "Instagram",
-        url: "https://www.instagram.com/starknight_143/",
-        icon: Icons.instagram,
-        navbar: true,
-      },
-      Steam: {
-        name: "Steam",
-        url: "https://s.team/p/hpdv-frbg/prvbvwtg",
-        icon: Icons.steam,
-        navbar: true,
-      },
-      CodePen: {
-        name: "CodePen",
-        url: "https://codepen.io/StarKnightt",
-        icon: Icons.codepen,
-        navbar: true,
-      },
-      Discord: {
-        name: "Discord",
-        url: "https://discord.com/users/878205528570990602",
-        icon: Icons.discord,
-        navbar: true,
-      },
-      Vercel: {
-        name: "Vercel",
-        url: "https://v0.link/prasenjit-nayak",
-        icon: Icons.vercel,
-        navbar: true,
-      },
-      buyMeACoffee: {
-        name: "buyMeACoffee",
-        url: "https://buymeacoffee.com/prasen",
-        icon: Icons.buyMeACoffee,
-        navbar: false,
       },
       email: {
         name: "Send Email",
-        url: "mailto:prasen.nayak@hotmail.com",
+        url: "mailto:hello@sanyi.dev",
         icon: Icons.email,
         navbar: false,
       },
@@ -204,368 +260,230 @@ export const DATA = {
 
   work: [
     {
-      company: "smart huh :)",
-      href: "#",
-      badges: ["NDA"],
-      location: "",
-      title: "Frontend Developer",
+      company: "Shiplog",
+      badges: ["Founder"],
+      location: "Remote",
+      title: "Founder",
+      logoUrl: "/shiplog.mov",
+      start: "June 2026",
+      end: "Present",
+      description:
+        "You ship the features, we write your changelog. Building a product that helps teams ship faster with automated, polished release notes.",
+    },
+    {
+      company: "Go2Code",
+      badges: ["Co-Founder"],
+      location: "Remote",
+      title: "Co-Founder",
       logoUrl: "/company.png",
-      start: "December 2025",
+      start: "2024",
       end: "Present",
       description:
-        "Gatekeeping this one because of NDA. Working on exciting stuff though!",
-      redacted: true,
+        "Co-founded a tech education platform connecting learners with expert developers. Mentored and trained 700+ interns worldwide in full-stack web development, led 50+ live workshops, and helped 2,000+ learners across 25+ countries.",
     },
     {
-      company: "Stealth AI Startup",
-      href: "https://www.linkedin.com/company/stealthaistartup/",
+      company: "Independent Developer",
+      href: "https://github.com/mrsanyi123",
       badges: [],
-      location: "Remote",
+      location: "Addis Ababa, Ethiopia",
       title: "Full Stack Developer",
-      logoUrl: "/stealth-ai.webp",
-      start: "August 2025",
-      end: "September 2025",
-      description:
-        "Built and shipped features in a fast-paced startup environment. Worked on React frontend components, integrated REST APIs, and collaborated with cross-functional teams on product delivery.",
-    },
-    {
-      company: "Freelance",
-      href: "https://github.com/StarKnightt",
-      badges: [],
-      location: "Remote",
-      title: "Frontend Developer",
       logoUrl: "/freelance.webp",
-      start: "2025",
+      start: "2023",
       end: "Present",
       description:
-        "Delivering web solutions for startups and small businesses. Building responsive UIs with React/Next.js, integrating third-party APIs, and deploying production-ready applications.",
-    },
-    {
-      company: "v0 by Vercel",
-      href: "https://v0.app/@starknightt",
-      badges: [],
-      location: "Remote",
-      title: "v0 Ambassador",
-      logoUrl: "/v0dev_logo.webp",
-      start: "2025",
-      end: "Present",
-      description: "Community ambassador for Vercel's AI-powered UI generation tool. Creating and sharing projects, helping developers adopt v0 for rapid prototyping.",
-    },
-  ],
-  education: [
-    {
-      school: "Trident Academy Of Technology",
-      href: "https://tat.ac.in/",
-      degree: "B.Tech in Computer Science and Information Technology",
-      logoUrl: "/buildspace.webp",
-      start: "2020",
-      end: "2024",
-    },
-    {
-      school: "Netaji Subhas Memorial City College",
-      href: "https://www.nsmcity.ac.in/index.asp",
-      degree: "Higher Secondary",
-      logoUrl: "/waterloo.webp",
-      start: "2019",
-      end: "2020",
+        "Building and shipping products across web, mobile, and browser extensions — from AI study tools to apps that help people reclaim their time.",
     },
   ],
   projects: [
     {
-      title: "Next.js Learning",
-      href: "https://learn.prasen.dev/",
-      dates: "May 2026 - Present",
+      title: "Shiplog",
+      href: "https://sanyi.vercel.app",
+      dates: "June 2026 - Present",
       active: true,
       description:
-        "A free, open-source interactive learning platform for mastering Next.js with 17 structured chapters from basics to production patterns. Features Ctrl+K search, in-site video player, interactive architecture diagrams, and neo-brutalism design.",
-      technologies: [
-        "Next.js 16",
-        "React 19",
-        "TypeScript",
-        "Tailwind CSS v4",
-        "Framer Motion",
-        "Vercel",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://learn.prasen.dev/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/Next.JS-Learning",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/6a16bc92d99287327250b129/download.mp4",
-    },
-    {
-      title: "Dateup",
-      href: "https://dateup.in",
-      dates: "April 2026 - Present",
-      active: true,
-      description:
-        "An AI-powered dating profile optimizer that helps you get more matches. Features AI photo enhancement, a rizz assistant for conversation starters, and a profile reviewer for actionable feedback.",
+        "A changelog platform for modern teams — you ship the features, Shiplog writes the release notes. Built to help founders and developers communicate product updates clearly.",
       technologies: [
         "Next.js",
-        "Supabase",
         "TypeScript",
-        "TailwindCSS",
-        "xAI Grok",
-        "OpenAI",
-        "Groq",
-        "Dodo Payments",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://dateup.in",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/69fc6b4498a4e5006b3c5cb6/download.mp4",
-    },
-    {
-      title: "CleanType",
-      href: "https://clean-type.vercel.app/",
-      dates: "March 2025 - April 2025",
-      active: true,
-      description:
-        "A super minimalist write experience, type with minimalist, no noise and distraction, completely fresh Windows app, with a clean UI and no ads, just pure writing experience.",
-      technologies: [
-        "Rust",
-        "Tauri",
-        "Typescript",
-        "CSS",
-        "Vite",
-        "Git",
         "React",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.cleantype.software/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/CleanType",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/68011ca73ab3a7b826bbfac0/download.mp4",
-    },
-    {
-      title: "Wallpaperz",
-      href: "https://www.wallpaperz.in/",
-      dates: "January 2025 - February 2025",
-      active: true,
-      description:
-        "A modern wallpaper discovery platform where you can find stunning wallpapers and generate images with AI.",
-      technologies: [
-        "Next.js",
-        "Git",
-        "TailwindCSS",
-        "Framer-motion",
-        "TypeScript",
-        "Imagekit",
-        "shadcnUI",
-        "DreamStudio",
-        "Stability AI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://www.wallpaperz.in/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/wallpaperz",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/67d5057eefcecbdea7560e35/download.mp4",
-    },
-    {
-      title: "3D Carousel Gallery",
-      href: "https://3dcarousell.vercel.app/",
-      dates: "December 2024 - January 2025",
-      active: true,
-      description:
-        "A beautiful and interactive 3D carousel gallery built with Next.js, featuring image and video support with an integrated music player.",
-      technologies: [
-        "Next.js",
-        "CSS 3D Transform",
-        "SoundCloud Widget API",
-        "Modern-Javascript",
+        "Tailwind CSS",
         "Vercel",
-        "Git",
       ],
+      video: "/shiplog.mov",
       links: [
         {
           type: "Website",
-          href: "https://3dcarousell.vercel.app/",
+          href: "https://sanyi.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/3D-Carousel",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/67912b93d696a7af3b2e38ef/download.mp4",
     },
     {
-      title: "GitHub Buddy Finder",
-      href: "https://buddy-find.vercel.app/",
-      dates: "April 2023 - September 2023",
+      title: "YScroll",
+      href: "https://sanyi.vercel.app",
+      dates: "2025 - Present",
       active: true,
       description:
-        "This innovative web application helps developers connect with like-minded individuals based on their GitHub activity and language preferences.",
-      technologies: [
-        "React.js",
-        "Octokit",
-        "Rest API",
-        "TailwindCSS",
-        "react-icons",
-        "react-router-dom",
-        "Vite",
-      ],
+        "An app designed to help people reduce time spent on short-form content like TikTok, YouTube Shorts, Instagram Reels, and X. Reached 3,000+ installs within the first two weeks of launch.",
+      technologies: ["React", "TypeScript", "Mobile", "Product Design"],
+      image: "/portfolio.png",
       links: [
         {
           type: "Website",
-          href: "https://buddy-find.vercel.app/",
+          href: "https://sanyi.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/Buddy-Finder",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/6745ec82c84c6b7e105c3ee5/download.mp4",
     },
     {
-      title: "Solar System",
-      href: "https://solarrsystem.vercel.app/",
-      dates: "September 2024 - October 2024",
+      title: "YScroll Mobile",
+      href: "https://sanyi.vercel.app",
+      dates: "2026 - Present",
       active: true,
       description:
-        "This project is a visually stunning and interactive web application that provides information about the solar system and it's planet with music.",
-      technologies: [
-        "React.js",
-        "font-awesome",
-        "react-icons",
-        "react-dom",
-        "CSS3",
-        "Vite",
-        "Git",
-      ],
+        "Native-feel mobile experience for YScroll: smooth scrolling, saved sessions, and offline-friendly reading flows.",
+      technologies: ["React Native", "TypeScript", "Mobile", "YScroll"],
+      image: "/sanyi.jpg",
       links: [
         {
           type: "Website",
-          href: "https://solarrsystem.vercel.app/",
+          href: "https://sanyi.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/6745ef75b79a267f99668bda/download.mp4",
     },
     {
-      title: "Coffee-Website",
-      href: "https://coffee-websitee.vercel.app/",
-      dates: "September 2024 - October 2024",
+      title: "YScroll Chrome Extension",
+      href: "https://sanyi.vercel.app",
+      dates: "2026 - Present",
       active: true,
       description:
-        "A web app, with the futurisitc yet nostalgic design of a coffee shop, with a menu and blend of retro vibes.",
+        "Browser extension that brings YScroll features into any tab — quick capture, sync with the app, and a lightweight UI.",
       technologies: [
-        "React.js",
-        "Git",
-        "TailwindCSS",
-        "Framer-motion",
-        "React-icons",
-        "React-router-dom",
+        "Chrome Extension",
+        "JavaScript",
+        "Web Extensions",
+        "YScroll",
       ],
+      image: "/freelance.webp",
       links: [
         {
           type: "Website",
-          href: "https://coffee-websitee.vercel.app/",
+          href: "https://sanyi.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/StarKnightt/Coffee-Website",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "",
-      video: "https://video.gumlet.io/6745e593080b60408ca085f7/6745ea2d080b60408ca0bc08/download.mp4",
     },
     {
-      title: "Resume Builder",
-      href: "https://resume-builder-ten-opal.vercel.app/",
-      dates: "May 2023 - Sept 2023",
+      title: "AI Study Assistant",
+      href: "https://sanyi.vercel.app",
+      dates: "2025 - Present",
       active: true,
       description:
-        "It was my final year [Project](https://github.com/StarKnightt/ResumeBuilder) in our college, It is a interactive and versatile Dynamic CV Builder, completely build from scratch with backend functionallity .",
-      technologies: [
-        "CSS",
-        "javascript",
-        "MongoDB",
-        "Express.js",
-        "HTML",
-        "Regex",
-        "Node.js",
-      ],
+        "Intelligent platform generating study notes, quizzes, and flashcards from user materials using AI.",
+      technologies: ["React", "Python", "FastAPI", "Groq AI", "Tailwind"],
+      image: "/company.png",
       links: [
         {
           type: "Website",
-          href: "https://builddresume.vercel.app/",
+          href: "https://sanyi.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
+      ],
+    },
+    {
+      title: "PinShot",
+      href: "https://sanyi.vercel.app",
+      dates: "2025",
+      active: false,
+      description:
+        "A visual feedback tool for teams and creators. Scaled to 900+ users and generated 1,400+ comments within two weeks of launch.",
+      technologies: ["React", "TypeScript", "UI/UX", "Product"],
+      image: "/freelance.webp",
+      links: [
         {
-          type: "Source",
-          href: "https://github.com/StarKnightt/ResumeBuilder",
-          icon: <Icons.github className="size-3" />,
+          type: "Website",
+          href: "https://sanyi.vercel.app",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
-      
-      image: "",
-      video:
-        "https://video.gumlet.io/6745e593080b60408ca085f7/6745e5e5080b60408ca08984/download.mp4",
-    }
+    },
+    {
+      title: "Go2Code Platform",
+      href: "https://go2cod.com",
+      dates: "2024 - Present",
+      active: true,
+      description:
+        "Tech education platform connecting learners with expert developers and courses.",
+      technologies: ["Next.js", "JavaScript", "UI/UX", "Figma", "Performance"],
+      image: "/company.png",
+      links: [
+        {
+          type: "Website",
+          href: "https://go2cod.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
   ],
-  hackathons: [
+  achievements: [
     {
-      title: "Smart India Hackathon 2022",
-      dates: "March 23rd - 25th, 2022",
-      location: "Bhubaneswar, India",
+      title: "ALX Addis Teen Code Hackathon Winner",
+      dates: "2025",
+      location: "Addis Ababa, Ethiopia",
       description:
-        "Built 'EducationX' - an e-learning portal with free and premium educational content. Implemented user authentication, course management, and payment integration.",
-      image:
-        "/smart-india-hackathon.webp",
-      mlh: "https://github.com/Synchrotek/E-LearningX",
+        "Won the ALX Addis Teen Code Hackathon — recognized for building innovative solutions under pressure.",
+      image: "/company.png",
+      href: "/achievements",
       links: [],
     },
     {
-      title: "Smart India Hackathon 2023",
-      dates: "December 19th - 23rd, 2023",
-      location: "Bhubaneswar, India",
+      title: "YScroll — 3,000+ Installs in 2 Weeks",
+      dates: "2025",
+      location: "Product Launch",
       description:
-        "Built 'NexusLink' - a real-time collaborative coding platform with multi-user editing, integrated chat, and project management features using WebSockets.",
-      image:
-        "/logo.webp",
-      mlh: "https://nexuslink01v.netlify.app/",
+        "After struggling with short-form content overload myself, I built YScroll — it reached 3,000+ installs in less than two weeks and keeps growing.",
+      image: "/yscrollE.png",
+      href: "https://chromewebstore.google.com/detail/yscroll-stop-the-endless/hlnhamlgmoijbfhilkanhifompndjaho",
+      links: [],
+    },
+    {
+      title: "PinShot — 900+ Users in 2 Weeks",
+      dates: "2025",
+      location: "Product Launch",
+      description:
+        "Built PinShot, a visual feedback tool that scaled to 900+ users and 1,400+ comments within two weeks of launch.",
+      image: "/freelance.webp",
+      href: "#projects",
+      links: [],
+    },
+    {
+      title: "Mentored 700+ Interns at Go2Code",
+      dates: "2024 - Present",
+      location: "Go2Code",
+      description:
+        "Co-founded Go2Code and mentored 700+ interns worldwide in full-stack web development, live workshops, and real-world projects.",
+      image: "/company.png",
+      links: [],
+    },
+    {
+      title: "40K+ Tech Content Creator",
+      dates: "2024 - Present",
+      location: "LinkedIn, X & YouTube",
+      description:
+        "Built a 40K+ high-trust audience creating tech content across LinkedIn (30K+), YouTube (6.6K), and X (5.7K).",
+      image: "/sanyi.jpg",
+      href: "/promote",
+      links: [],
+    },
+    {
+      title: "Responsive Web Design Certification",
+      dates: "2024",
+      location: "freeCodeCamp",
+      description:
+        "Earned the Responsive Web Design certification — solidifying fundamentals in HTML, CSS, and accessible layout patterns.",
+      image: "/shiplog.png",
+      href: "https://www.freecodecamp.org",
       links: [],
     },
   ],

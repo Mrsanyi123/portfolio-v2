@@ -6,9 +6,9 @@ import { useTheme } from "next-themes";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import {
   HomeIcon,
-  NotebookIcon,
   VideoIcon,
   FolderIcon,
+  MegaphoneIcon,
   MoonIcon,
   SunIcon,
   MonitorIcon,
@@ -22,6 +22,7 @@ import {
   Volume2Icon,
   VolumeXIcon,
 } from "lucide-react";
+import { DATA } from "@/data/resume";
 import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { useSoundSettings } from "@/components/sound-provider";
@@ -104,18 +105,6 @@ export function CommandPalette() {
       group: "Pages",
     },
     {
-      id: "blog",
-      label: "Blog",
-      description: "View all blog posts",
-      icon: <NotebookIcon className="size-4" />,
-      action: () => {
-        setOpen(false);
-        router.push("/blog");
-      },
-      keywords: ["blog", "posts", "articles", "writing"],
-      group: "Pages",
-    },
-    {
       id: "videos",
       label: "Videos",
       description: "Watch video tutorials",
@@ -140,26 +129,16 @@ export function CommandPalette() {
       group: "Pages",
     },
     {
-      id: "gadgets",
-      label: "Gadgets",
-      description: "View my gadgets",
-      icon: <Icons.shop className="size-4" />,
+      id: "promote",
+      label: "Promote",
+      description: "Sponsorship & partnership packages",
+      icon: <MegaphoneIcon className="size-4" />,
       action: () => {
         setOpen(false);
-        router.push("/gadgets");
+        router.push("/promote");
       },
-      keywords: ["gadgets", "gear", "setup", "tools"],
+      keywords: ["promote", "sponsor", "partnership", "advertise", "collab"],
       group: "Pages",
-    },
-    // Navigation - Sections
-    {
-      id: "about",
-      label: "About",
-      description: "Jump to about section",
-      icon: <HashIcon className="size-4" />,
-      action: () => navigateToSection("about"),
-      keywords: ["about", "bio", "info"],
-      group: "Sections",
     },
     {
       id: "skills",
@@ -251,9 +230,9 @@ export function CommandPalette() {
     {
       id: "copy-email",
       label: "Copy Email",
-      description: "prasen.nayak@hotmail.com",
+      description: DATA.contact.email,
       icon: copied ? <CheckIcon className="size-4" /> : <CopyIcon className="size-4" />,
-      action: () => copyToClipboard("prasen.nayak@hotmail.com"),
+      action: () => copyToClipboard(DATA.contact.email),
       keywords: ["copy", "email", "contact"],
       group: "Actions",
     },
@@ -263,7 +242,7 @@ export function CommandPalette() {
       description: "Visit GitHub profile",
       icon: <GithubIcon className="size-4" />,
       action: () => {
-        window.open("https://github.com/StarKnightt", "_blank");
+        window.open(DATA.contact.social.GitHub.url, "_blank");
         setOpen(false);
       },
       keywords: ["github", "profile", "code"],
@@ -275,7 +254,7 @@ export function CommandPalette() {
       description: "Visit LinkedIn profile",
       icon: <LinkedinIcon className="size-4" />,
       action: () => {
-        window.open("https://www.linkedin.com/in/prasenjitnayak/", "_blank");
+        window.open(DATA.contact.social.LinkedIn.url, "_blank");
         setOpen(false);
       },
       keywords: ["linkedin", "profile", "professional"],
@@ -287,7 +266,7 @@ export function CommandPalette() {
       description: "Visit X profile",
       icon: <Icons.x className="size-4" />,
       action: () => {
-        window.open("https://x.com/Star_Knight12", "_blank");
+        window.open(DATA.contact.social.X.url, "_blank");
         setOpen(false);
       },
       keywords: ["x", "twitter", "social"],

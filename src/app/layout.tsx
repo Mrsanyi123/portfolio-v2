@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/json-ld";
 import { PageBackground } from "@/components/page-background";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { CommandPalette } from "@/components/command-palette";
+// import { CommandPalette } from "@/components/command-palette";
 import { SoundProvider } from "@/components/sound-provider";
 import { BackToTop } from "@/components/back-to-top";
 import { DomainGuardedAnalytics } from "@/components/domain-guarded-analytics";
@@ -25,22 +25,32 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: "Prasenjit Nayak | Full Stack Developer",
-    template: `%s | Prasenjit Nayak`,
+    default: `${DATA.name} | Developer`,
+    template: `%s | ${DATA.name}`,
   },
-  description: "Prasenjit Nayak is a Full Stack Developer from India, with expertise in React, Next.js, TypeScript and Node.js. I create modern web applications and have a passion for clean, efficient code. View my portfolio to see my latest projects and technical blog posts.",
-  keywords: ["Prasenjit Nayak", "Full Stack Developer", "React Developer", "Next.js Developer", "TypeScript Developer", "Node.js Developer", "Web Developer India", "Software Engineer"],
-  authors: [{ name: "Prasenjit Nayak" }],
-  creator: "Prasenjit Nayak",
-  publisher: "Prasenjit Nayak",
+  description: `${DATA.name} is a 16 year old developer and founder from Ethiopia, building products like Shiplog and YScroll with React, Next.js, and TypeScript.`,
+  keywords: [
+    DATA.name,
+    "Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "Young Developer",
+    "Tech Content Creator",
+    "Web Developer Ethiopia",
+  ],
+  authors: [{ name: DATA.name }],
+  creator: DATA.name,
+  publisher: DATA.name,
   alternates: {
     canonical: DATA.url,
   },
   openGraph: {
-    title: "Prasenjit Nayak | Full Stack Developer",
-    description: "Full Stack Developer specializing in React, Next.js, TypeScript and Node.js. Check out my portfolio, projects and blog posts.",
+    title: `${DATA.name} | Developer`,
+    description:
+      "16 year old developer and founder building Shiplog, YScroll, and modern web apps with React, Next.js, and TypeScript.",
     url: DATA.url,
-    siteName: "Prasenjit Nayak - Portfolio",
+    siteName: `${DATA.name} - Portfolio`,
     locale: "en_US",
     type: "website",
     images: [
@@ -48,16 +58,16 @@ export const metadata: Metadata = {
         url: `${DATA.url}/og.png`,
         width: 1200,
         height: 630,
-        alt: "Prasenjit Nayak - Full Stack Developer"
-      }
-    ]
+        alt: `${DATA.name} - Developer`,
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Prasenjit Nayak | Full Stack Developer',
-    description: 'Full Stack Developer specializing in React, Next.js, TypeScript and Node.js',
+    card: "summary_large_image",
+    title: `${DATA.name} | Developer`,
+    description: "16 year old developer and founder building impactful products and tech content.",
     images: [`${DATA.url}/og.png`],
-    creator: '@Star_Knight12',
+    creator: "@imsanyidiriba",
   },
   robots: {
     index: true,
@@ -65,9 +75,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
@@ -77,15 +87,51 @@ export const metadata: Metadata = {
       { url: "/favicons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
     apple: [
-      { url: "/favicons/apple-icon-57x57.png", sizes: "57x57", type: "image/png" },
-      { url: "/favicons/apple-icon-60x60.png", sizes: "60x60", type: "image/png" },
-      { url: "/favicons/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
-      { url: "/favicons/apple-icon-76x76.png", sizes: "76x76", type: "image/png" },
-      { url: "/favicons/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
-      { url: "/favicons/apple-icon-120x120.png", sizes: "120x120", type: "image/png" },
-      { url: "/favicons/apple-icon-144x144.png", sizes: "144x144", type: "image/png" },
-      { url: "/favicons/apple-icon-152x152.png", sizes: "152x152", type: "image/png" },
-      { url: "/favicons/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
+      {
+        url: "/favicons/apple-icon-57x57.png",
+        sizes: "57x57",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-60x60.png",
+        sizes: "60x60",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-72x72.png",
+        sizes: "72x72",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-76x76.png",
+        sizes: "76x76",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-114x114.png",
+        sizes: "114x114",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-120x120.png",
+        sizes: "120x120",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-144x144.png",
+        sizes: "144x144",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-152x152.png",
+        sizes: "152x152",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/apple-icon-180x180.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
     ],
     other: [
       {
@@ -104,7 +150,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Prasenjit Nayak",
+    title: DATA.name,
   },
   other: {
     "mobile-web-app-capable": "yes",
@@ -128,24 +174,19 @@ export default function RootLayout({
           <PageBackground />
         </div>
 
-
         {/* Main content */}
         <div className="relative z-10 max-w-4xl mx-auto pt-20 sm:pt-24 pb-24 px-6">
           <DomainGuardedAnalytics gaId="G-XVF0SFD4GW" />
           <JsonLd />
           <ScrollProgress />
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-          >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <SoundProvider>
               <TooltipProvider delayDuration={0}>
                 {children}
                 <Analytics />
                 <SpeedInsights />
                 <Navbar />
-                <CommandPalette />
+                {/* <CommandPalette /> */}
                 <BackToTop />
                 <SmoothCursor />
               </TooltipProvider>

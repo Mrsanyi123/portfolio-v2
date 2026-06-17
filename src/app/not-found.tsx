@@ -37,10 +37,10 @@ export default function NotFound() {
             Projects
           </Link>
           <Link
-            href="/blog"
+            href="/promote"
             className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-5 py-2.5 text-sm font-medium shadow-sm backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-background"
           >
-            Blog
+            Promote
           </Link>
         </div>
       </BlurFade>

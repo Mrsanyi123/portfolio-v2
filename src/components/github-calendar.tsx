@@ -41,14 +41,14 @@ export function GithubContributions() {
         ) : (
           <div className="overflow-x-auto p-4 -mx-1">
             <GitHubCalendar
-              username="StarKnightt"
+              username="mrsanyi123"
               colorScheme={resolvedTheme as "light" | "dark"}
               fontSize={12}
               blockSize={12}
               blockMargin={4}
               theme={{
-                dark: ['#161b22', '#3a3f47', '#6b7280', '#b0b8c4', '#e5e7eb'],
-                light: ['#ebedf0', '#9ca3af', '#6b7280', '#4b5563', '#374151'],
+                dark: ["#161b22", "#3a3f47", "#6b7280", "#b0b8c4", "#e5e7eb"],
+                light: ["#ebedf0", "#9ca3af", "#6b7280", "#4b5563", "#374151"],
               }}
             />
           </div>

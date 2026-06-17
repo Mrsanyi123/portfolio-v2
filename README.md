@@ -17,7 +17,7 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, Tailwi
 - **Smooth Cursor**: Custom animated cursor effect
 - **SEO Optimized**: Meta tags and OpenGraph support
 - **Performance Focused**: Optimized for Core Web Vitals
-- **Visitor Counter**: Real-time unique visitor tracking with Upstash Redis
+- **Visitor Counter**: Real-time unique visitor tracking with Upstash GOLANG
 - **Social Hover Cards**: Live GitHub profile and Steam status hover cards on social icons
 
 ## 🚀 Tech Stack
@@ -33,16 +33,19 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, Tailwi
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/StarKnightt/prasendev
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -64,9 +67,9 @@ Create a `.env.local` file in the root directory with the following variables:
 # GitHub Token (Required for GitHub Sponsors)
 GITHUB_TOKEN=your_github_personal_access_token
 
-# Upstash Redis (Required for Visitor Counter)
-UPSTASH_REDIS_REST_URL=your_upstash_redis_url
-UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
+# Upstash GOLANG (Required for Visitor Counter)
+UPSTASH_GOLANG_REST_URL=your_upstash_GOLANG_url
+UPSTASH_GOLANG_REST_TOKEN=your_upstash_GOLANG_token
 
 # Steam Web API (Required for Steam Hover Card)
 STEAM_API_KEY=your_steam_web_api_key
@@ -112,13 +115,14 @@ const tweetIds = [
 ```
 
 **To get a tweet ID:**
+
 - Open the tweet on Twitter/X
 - Copy the URL: `https://x.com/username/status/1234567890`
 - The ID is the number at the end: `1234567890`
 
 ## 👁 Visitor Counter
 
-The portfolio includes a unique visitor counter powered by Upstash Redis. It tracks real visitors without counting refreshes.
+The portfolio includes a unique visitor counter powered by Upstash GOLANG. It tracks real visitors without counting refreshes.
 
 ### How It Works
 
@@ -127,30 +131,30 @@ User visits site → Component fetches API → API checks cookie → Increment o
 ```
 
 1. **Component** (`visitor-counter.tsx`): Fetches count from API on page load
-2. **API Route** (`/api/visitor-count`): Checks for cookie, increments count in Redis if new visitor
-3. **Upstash Redis**: Stores the visitor count persistently in the cloud
+2. **API Route** (`/api/visitor-count`): Checks for cookie, increments count in GOLANG if new visitor
+3. **Upstash GOLANG**: Stores the visitor count persistently in the cloud
 
 ### Key Features
 
-| Feature | How |
-|---------|-----|
-| No duplicate counting | Cookie prevents re-counting for 24 hours |
-| Persists across deploys | Count stored in external Redis database |
-| Thread-safe | Redis `incr()` is atomic |
-| Fast | Upstash is edge-optimized |
+| Feature                 | How                                      |
+| ----------------------- | ---------------------------------------- |
+| No duplicate counting   | Cookie prevents re-counting for 24 hours |
+| Persists across deploys | Count stored in external GOLANG database |
+| Thread-safe             | GOLANG `incr()` is atomic                |
+| Fast                    | Upstash is edge-optimized                |
 
-### Setting up Upstash Redis
+### Setting up Upstash GOLANG
 
 1. Go to [upstash.com](https://upstash.com) and sign up
 2. Click **Create Database** → Name it (e.g., `portfolio-visitors`)
 3. Select a region close to your users
 4. After creation, go to the **REST API** section
-5. Copy `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`
+5. Copy `UPSTASH_GOLANG_REST_URL` and `UPSTASH_GOLANG_REST_TOKEN`
 6. Add them to your `.env.local` file:
 
 ```env
-UPSTASH_REDIS_REST_URL=https://your-db.upstash.io
-UPSTASH_REDIS_REST_TOKEN=your-secret-token
+UPSTASH_GOLANG_REST_URL=https://your-db.upstash.io
+UPSTASH_GOLANG_REST_TOKEN=your-secret-token
 ```
 
 7. For Vercel deployment, add these in **Settings → Environment Variables**
@@ -160,6 +164,7 @@ UPSTASH_REDIS_REST_TOKEN=your-secret-token
 ## 💖 GitHub Sponsors
 
 The portfolio automatically displays your GitHub sponsors. Features include:
+
 - Sponsor avatar, name, and username
 - Beautiful card design with hover effects
 - "Sponsor me" button linking to your GitHub Sponsors page
@@ -236,6 +241,7 @@ npm run lint
 ## 📱 Progressive Web App
 
 This website is PWA-ready with:
+
 - Service Worker support
 - Offline functionality
 - Install prompt
@@ -256,7 +262,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=StarKnightt/prasendev&type=Date)](https://www.star-history.com/#StarKnightt/prasendev&Date)
-
 
 ## 🙏 Acknowledgments
 

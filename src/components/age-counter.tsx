@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const calculateYears = () => {
-  const birthDate = new Date('2003-06-27T04:00:00');
+  const birthDate = new Date('2009-09-08T00:00:00');
   const now = new Date();
   const ageInYears = (now.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
   return ageInYears.toFixed(9);
@@ -27,7 +27,7 @@ export function AgeCounter() {
   if (years === null) {
     return (
       <div className="text-sm font-bold min-h-[20px]">
-        <span className="tabular-nums opacity-0">been on earth for 00.000000000 years</span>
+        <span className="tabular-nums opacity-0">16.000000000 years old · developer</span>
       </div>
     );
   }
@@ -35,7 +35,7 @@ export function AgeCounter() {
   return (
     <div className="text-sm font-bold min-h-[20px]">
       <span className="tabular-nums">
-        been on earth for {years} years
+        {years} years old · developer
       </span>
     </div>
   );

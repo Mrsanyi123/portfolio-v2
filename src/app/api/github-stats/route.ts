@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const GITHUB_USERNAME = "StarKnightt";
+const GITHUB_USERNAME = "mrsanyi123";
 const CACHE_MAX_AGE = 3600; // 1 hour
 
 export async function GET() {

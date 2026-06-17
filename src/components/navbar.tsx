@@ -7,7 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Terminal, Home } from "lucide-react";
+import { Menu, X, Home } from "lucide-react";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { buttonVariants } from "@/components/ui/button";
@@ -137,16 +137,7 @@ export default function Navbar() {
 
                   <div className="mx-1.5 h-4 w-px bg-border/60" />
 
-                  <div className="flex items-center gap-0.5">
-                    <Link
-                      href="/cli"
-                      className="rounded-lg p-1.5 text-muted-foreground transition-colors hover:text-foreground hover:bg-muted/60"
-                      aria-label="CLI Mode"
-                    >
-                      <Terminal className="size-4" />
-                    </Link>
-                    <ModeToggle />
-                  </div>
+                  <ModeToggle />
                 </div>
 
                 {/* Mobile controls */}
@@ -229,20 +220,6 @@ export default function Navbar() {
                           </motion.div>
                         );
                       })}
-                      <div className="my-1 h-px bg-border/40" />
-                      <motion.div
-                        initial={{ opacity: 0, x: -12 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: DATA.navbar.length * 0.04, duration: 0.2 }}
-                      >
-                        <Link
-                          href="/cli"
-                          className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:bg-muted/40"
-                        >
-                          <Terminal className="size-4" />
-                          CLI Mode
-                        </Link>
-                      </motion.div>
                     </div>
                   </motion.div>
                 </>
@@ -291,26 +268,6 @@ export default function Navbar() {
               ))}
 
               <div className="mx-0.5 h-8 w-px shrink-0 bg-border/40" />
-
-              <DockIcon>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Link
-                      href="/cli"
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-10 rounded-full"
-                      )}
-                      aria-label="CLI Mode"
-                    >
-                      <Terminal className="size-[18px]" />
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent sideOffset={10}>
-                    <p>CLI Mode</p>
-                  </TooltipContent>
-                </Tooltip>
-              </DockIcon>
 
               <DockIcon>
                 <ModeToggle />
