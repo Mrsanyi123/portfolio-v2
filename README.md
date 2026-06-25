@@ -35,7 +35,7 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, Tailwi
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/StarKnightt/prasendev
+git clone https://github.com/StarKnightt/sanyi
 ```
 
 2. Install dependencies:
@@ -261,7 +261,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=StarKnightt/prasendev&type=Date)](https://www.star-history.com/#StarKnightt/prasendev&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=StarKnightt/sanyi&type=Date)](https://www.star-history.com/#StarKnightt/sanyi&Date)
 
 ## 🙏 Acknowledgments
 
