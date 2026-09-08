@@ -94,10 +94,10 @@ export const DATA = {
       skills: [
         { name: "Git", icon: faGitAlt },
         { name: "Docker", customIcon: Icons.docker },
-        { name: "GitHub Actions", customIcon: Icons.githubActions },
         { name: "Vercel", customIcon: Icons.vercel },
         { name: "Figma", icon: faFigma },
         { name: "VS Code", customIcon: Icons.vscode },
+        { name: "Cursor", customIcon: Icons.cursor },
       ],
     },
   ],
