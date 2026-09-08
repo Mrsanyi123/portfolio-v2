@@ -1,8 +1,11 @@
 /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
+import { DATA } from '@/data/resume';
 
 export const runtime = 'edge';
+
+const avatarUrl = `${DATA.url}${DATA.avatarUrl}`;
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -19,28 +22,28 @@ export async function GET(request: NextRequest) {
             flexDirection: 'column',
             justifyContent: 'space-between',
             padding: '80px',
-            backgroundColor: '#ffffff',
+            backgroundColor: '#0a0a0a',
             fontFamily: 'system-ui, -apple-system, sans-serif',
-            borderBottom: '6px solid #000000',
+            borderBottom: '6px solid #ffffff',
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <img
-                src="https://avatars.githubusercontent.com/u/92244026?v=4"
+                src={avatarUrl}
                 width="40"
                 height="40"
                 style={{ borderRadius: '50%' }}
               />
-              <span style={{ color: '#000000', fontSize: '20px', fontWeight: 600 }}>
-                Prasenjit Nayak
+              <span style={{ color: '#ffffff', fontSize: '20px', fontWeight: 600 }}>
+                {DATA.name}
               </span>
             </div>
             <h1
               style={{
                 fontSize: title.length > 50 ? '50px' : '62px',
                 fontWeight: 800,
-                color: '#000000',
+                color: '#ffffff',
                 lineHeight: 1.1,
                 margin: 0,
                 maxWidth: '950px',
@@ -52,11 +55,11 @@ export async function GET(request: NextRequest) {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <span style={{ color: '#666666', fontSize: '20px' }}>
-              prasen.dev
+            <span style={{ color: '#a1a1aa', fontSize: '20px' }}>
+              {DATA.url.replace('https://', '')}
             </span>
-            <span style={{ color: '#666666', fontSize: '20px' }}>
-              Blog
+            <span style={{ color: '#a1a1aa', fontSize: '20px' }}>
+              Portfolio
             </span>
           </div>
         </div>
@@ -72,11 +75,10 @@ export async function GET(request: NextRequest) {
           height: '100%',
           width: '100%',
           display: 'flex',
-          backgroundColor: '#ffffff',
+          backgroundColor: '#0a0a0a',
           fontFamily: 'system-ui, -apple-system, sans-serif',
         }}
       >
-        {/* Left section */}
         <div
           style={{
             display: 'flex',
@@ -91,24 +93,24 @@ export async function GET(request: NextRequest) {
               style={{
                 fontSize: '56px',
                 fontWeight: 800,
-                color: '#000000',
+                color: '#ffffff',
                 margin: 0,
                 letterSpacing: '-2px',
                 lineHeight: 1.1,
               }}
             >
-              Prasenjit Nayak
+              {DATA.name}
             </h1>
 
             <p
               style={{
                 fontSize: '26px',
-                color: '#555555',
+                color: '#a1a1aa',
                 margin: 0,
                 lineHeight: 1.4,
               }}
             >
-              Full Stack Developer building modern web apps with React, Next.js, and TypeScript.
+              16-year-old developer & founder building Shiplog, YScroll, and modern web apps.
             </p>
 
             <div
@@ -120,26 +122,25 @@ export async function GET(request: NextRequest) {
               }}
             >
               <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#22c55e' }} />
-              <span style={{ color: '#888888', fontSize: '18px' }}>
-                prasen.dev
+              <span style={{ color: '#71717a', fontSize: '18px' }}>
+                {DATA.url.replace('https://', '')}
               </span>
             </div>
           </div>
         </div>
 
-        {/* Right section - avatar */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             width: '400px',
-            backgroundColor: '#f5f5f5',
-            borderLeft: '1px solid #e5e5e5',
+            backgroundColor: '#18181b',
+            borderLeft: '1px solid #27272a',
           }}
         >
           <img
-            src="https://avatars.githubusercontent.com/u/92244026?v=4"
+            src={avatarUrl}
             width="180"
             height="180"
             style={{ borderRadius: '50%' }}

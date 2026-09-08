@@ -1,41 +1,40 @@
-# llms.txt - AI discoverability for prasen.dev
+# llms.txt — AI discoverability for sanyi.dev
 
-> Prasenjit Nayak's personal portfolio and technical blog.
+> Sanyi Diriba's personal portfolio — developer, founder, and tech content creator.
 
 ## About
 
-Prasenjit Nayak is a Full Stack Developer from Odisha, India, specializing in React, Next.js, TypeScript, and Node.js. He builds modern web applications, contributes to open source, and writes about web development.
+Sanyi Diriba is a 16-year-old developer and founder from Addis Ababa, Ethiopia. He builds products like Shiplog and YScroll, creates tech content for a 40K+ audience, and works with React, Next.js, TypeScript, Node.js, and Python.
 
 ## Pages
 
-- [Home](https://prasen.dev): Portfolio homepage with projects, skills, work experience, and social links.
-- [Blog](https://prasen.dev/blog): Technical articles about web development, React, Next.js, AI tools, and software engineering.
-- [Projects](https://prasen.dev/projects): Web applications and open source projects.
-- [Videos](https://prasen.dev/videos): YouTube videos about software development and technology.
-- [Gadgets](https://prasen.dev/gadgets): Developer tech setup, PC components, and productivity tools.
-- [Promote](https://sanyi.dev/promote): Sponsorship and partnership packages for tech brands across LinkedIn, X, and YouTube.
+- [Home](https://sanyi.dev): Portfolio homepage with projects, stack, work experience, achievements, and social links.
+- [Projects](https://sanyi.dev/projects): Products and apps — Shiplog, YScroll, AI Study Assistant, Go2Code, and more.
+- [Videos](https://sanyi.dev/videos): Long-form YouTube videos about development, startups, and building in public.
+- [Activity](https://sanyi.dev/activity): Recent posts from X and LinkedIn.
+- [Achievements](https://sanyi.dev/achievements): Hackathon wins, certifications, and milestones.
 
 ## Key Projects
 
-- [Next.js Learning Platform](https://learn.prasen.dev): A free, open-source interactive learning platform for mastering Next.js with 17 structured chapters.
-- [RepoStar](https://github.com/StarKnightt/RepoStar): Browse trending GitHub repositories with filtering and search.
-- [CleanType](https://github.com/StarKnightt/CleanType): A modern typing practice application.
-- [DateUp](https://github.com/StarKnightt/DateUp): AI-powered dating profile enhancer.
+- [Shiplog](https://sanyi.dev/projects): Changelog platform for modern teams — automated release notes.
+- [YScroll](https://yscroll.xyz): App and browser extension to reduce time spent on short-form content.
+- [Go2Code](https://go2cod.com): Non-profit tech education platform co-founded by Sanyi.
+- [AI Study Assistant](https://sanyi.dev/projects): AI-powered study notes, quizzes, and flashcards.
 
 ## Technical Stack
 
-Languages: TypeScript, JavaScript, Python
-Frontend: React, Next.js, TailwindCSS, Framer Motion
-Backend: Node.js, MongoDB, PostgreSQL, GOLANG
-Tools: Git, Cursor, Claude
+Frontend: React, Next.js, TypeScript, JavaScript, Tailwind CSS, HTML5, CSS3
+Backend: Node.js, Python, FastAPI, Express, REST & HTTP
+Database: PostgreSQL, MongoDB, Redis, Prisma
+Tools: Git, Docker, GitHub Actions, Vercel, Figma, VS Code
 
 ## Social
 
-- GitHub: https://github.com/StarKnightt
-- X (Twitter): https://x.com/Star_Knight12
-- LinkedIn: https://www.linkedin.com/in/prasenjitnayak/
-- YouTube: https://youtube.com/@Star_Knight12
+- GitHub: https://github.com/mrsanyi123
+- X: https://x.com/imsanyidiriba
+- LinkedIn: https://www.linkedin.com/in/sanyi-diriba/
+- YouTube: https://youtube.com/@Sanyi-Diriba
 
-## RSS
+## Contact
 
-- Blog feed: https://prasen.dev/rss.xml
+- Email: business.sanyi@gmail.com

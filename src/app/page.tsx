@@ -257,7 +257,7 @@ export default function Page() {
                     altText={work.company}
                     title={work.company}
                     subtitle={work.title}
-                    href={work.href}
+                    href={"href" in work ? work.href : undefined}
                     badges={work.badges}
                     period={`${work.start} - ${work.end}`}
                     description={work.description}

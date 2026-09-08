@@ -8,11 +8,12 @@ import {
 } from "@/components/ui/hover-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Heart, Coffee } from "lucide-react";
+import { DATA } from "@/data/resume";
 
 const BMC_PROFILE = {
-  name: "Prasenjit",
-  handle: "prasen",
-  avatar: "https://unavatar.io/buymeacoffee/prasen",
+  name: "Sanyi",
+  handle: "sanyi",
+  avatar: `${DATA.url}${DATA.avatarUrl}`,
   tagline: "Love to create magic with code",
   supporters: 2,
 };
@@ -34,7 +35,7 @@ export function BuyMeACoffeeHoverCard({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-3">
             <Avatar className="size-10 border border-border/50 shrink-0">
               <AvatarImage src={BMC_PROFILE.avatar} alt={BMC_PROFILE.name} referrerPolicy="no-referrer" />
-              <AvatarFallback>P</AvatarFallback>
+              <AvatarFallback>S</AvatarFallback>
             </Avatar>
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-1.5">

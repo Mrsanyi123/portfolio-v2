@@ -174,7 +174,7 @@ export const DATA = {
       name: "Cursor",
       description:
         "AI-powered code editor built on VS Code — my primary IDE for all projects.",
-      href: "https://cursor.com/referral?code=63BS4MRLZQQV",
+      href: "https://cursor.com",
       customIcon: Icons.cursor,
     },
     {
@@ -203,7 +203,7 @@ export const DATA = {
       name: "Hostinger",
       description:
         "Reliable and affordable hosting for my projects and client sites.",
-      href: "https://www.hostinger.com/in?REFERRALCODE=NP4PRASENELF",
+      href: "https://www.hostinger.com",
       icon: faServer,
     },
     {

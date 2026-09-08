@@ -10,9 +10,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Sparkles } from "lucide-react";
 
 const VERCEL_PROFILE = {
-  name: "Prasenjit Nayak",
-  handle: "starknightt",
-  avatar: "https://unavatar.io/github/StarKnightt",
+  name: "Sanyi Diriba",
+  handle: "mrsanyi123",
+  avatar: "https://unavatar.io/github/mrsanyi123",
   tagline: "22, Engineer, freelancer",
   prompts: 550,
 };

@@ -11,7 +11,6 @@ export async function GET(request: NextRequest) {
   
   // Revalidate the sitemap and relevant pages
   revalidatePath('/sitemap.xml');
-  revalidatePath('/blog');
   
   return NextResponse.json({ revalidated: true, now: Date.now() });
 } 

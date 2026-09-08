@@ -1,5 +1,9 @@
 {
-  "name": "Sanyi",
+  "name": "Sanyi — Developer & Founder",
+  "short_name": "Sanyi",
+  "description": "Portfolio of Sanyi Diriba — 16-year-old developer and founder building Shiplog, YScroll, and modern web apps.",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/favicons/favicon.ico",

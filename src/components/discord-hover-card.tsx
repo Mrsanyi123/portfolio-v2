@@ -66,12 +66,12 @@ export function DiscordHoverCard({ children }: { children: ReactNode }) {
       const avatarHash = d.discord_user.avatar;
       const avatarUrl = avatarHash
         ? `https://cdn.discordapp.com/avatars/${DISCORD_USER_ID}/${avatarHash}${avatarHash.startsWith("a_") ? ".gif" : ".png"}?size=128`
-        : "https://unavatar.io/github/StarKnightt";
+        : "https://unavatar.io/github/mrsanyi123";
 
       const customStatus = d.activities?.find((a: any) => a.type === 4)?.state || null;
 
       const result: LanyardData = {
-        displayName: d.discord_user.display_name || d.discord_user.global_name || "Prasen",
+        displayName: d.discord_user.display_name || d.discord_user.global_name || "Sanyi",
         username: d.discord_user.username,
         avatar: avatarUrl,
         status: d.discord_status || "offline",
