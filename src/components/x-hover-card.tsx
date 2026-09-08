@@ -14,7 +14,7 @@ const X_PROFILE = {
   handle: "imsanyidiriba",
   avatar: "https://unavatar.io/x/imsanyidiriba",
   description: "16 year old developer building on the web",
-  followers: 5710,
+  followers: 6030,
   verified: false,
 };
 

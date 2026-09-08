@@ -28,7 +28,7 @@ export async function GET() {
         <generator>Next.js</generator>
         <atom:link href="${DATA.url}/rss.xml" rel="self" type="application/rss+xml"/>
         <webfeeds:cover image="${DATA.url}/og.png" />
-        <webfeeds:icon>${DATA.url}/favicon.ico</webfeeds:icon>
+        <webfeeds:icon>${DATA.url}/sanyi.jpg</webfeeds:icon>
         <webfeeds:accentColor>2563EB</webfeeds:accentColor>
         <webfeeds:related layout="card" target="browser"/>
         <image>

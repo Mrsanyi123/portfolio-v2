@@ -14,7 +14,7 @@ const LINKEDIN_PROFILE = {
   headline: "Founder @Shiplog | 40K+ Tech Creator",
   avatar: "https://unavatar.io/linkedin/sanyi-diriba",
   connections: "500+",
-  followers: 28200,
+  followers: 30800,
 };
 
 export function LinkedInHoverCard({ children }: { children: ReactNode }) {

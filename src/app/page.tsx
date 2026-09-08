@@ -7,7 +7,6 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import {
   Tooltip,
   TooltipContent,
@@ -17,14 +16,14 @@ import { PersonSchema } from "@/components/schema/person-schema";
 import { Metadata } from "next";
 import ShinyButton from "@/components/ui/shiny-button";
 import { GithubSkeleton } from "@/components/skeletons/github-skeleton";
-import { LinkedInActivity } from "@/components/linkedin-activity";
-import { XActivity } from "@/components/x-activity";
 import { AgeCounter } from "@/components/age-counter";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FlipAvatar } from "@/components/flip-avatar";
 import { GitHubHoverCard } from "@/components/github-hover-card";
 import { XHoverCard } from "@/components/x-hover-card";
 import { LinkedInHoverCard } from "@/components/linkedin-hover-card";
+import DotField from "@/components/DotField";
+import { StackSection } from "@/components/stack-section";
+import { AchievementCard } from "@/components/achievement-card";
 
 const BLUR_FADE_DELAY = 0.04;
 export const metadata: Metadata = {
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: DATA.name,
     description: DATA.summary,
-    creator: "@sanyi",
+    creator: "@imsanyi",
     images: [`${DATA.url}/portfolio.png`],
   },
 };
@@ -76,16 +75,30 @@ function SectionLabel({ label }: { label: string }) {
 }
 
 export default function Page() {
-  const featuredProjects = DATA.projects.slice(0, 3);
+  const featuredProjectTitles = ["Shiplog", "YScroll", "AI Study Assistant"];
+  const featuredProjects = featuredProjectTitles
+    .map((title) => DATA.projects.find((project) => project.title === title))
+    .filter((project): project is (typeof DATA.projects)[number] => Boolean(project));
 
   return (
     <>
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <DotField
+          dotRadius={1.5}
+          dotSpacing={14}
+          bulgeStrength={67}
+          glowRadius={160}
+          sparkle={false}
+          waveAmplitude={0}
+          style={{ pointerEvents: 'none' }}
+        />
+      </div>
       <main className="flex min-h-[100dvh] flex-col space-y-12 sm:space-y-14">
         <PersonSchema />
 
         {/* ─── HERO ─── */}
         <section id="hero">
-          <div className="mx-auto w-full">
+          <div className="mx-auto w-full relative z-10">
             <div className="flex flex-col-reverse items-start gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
               <div className="flex min-w-0 flex-1 flex-col gap-5 sm:gap-6">
                 <div className="space-y-4">
@@ -190,22 +203,7 @@ export default function Page() {
               </h2>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 9.5}>
-              <div className="flex flex-wrap gap-2">
-                {DATA.skills.map((skill) => (
-                  <Badge
-                    key={skill.name}
-                    variant="secondary"
-                    className="inline-flex items-center gap-1.5 border border-border/50 px-3 py-1.5 text-sm"
-                  >
-                    {"customIcon" in skill ? (
-                      <skill.customIcon className="size-4" />
-                    ) : (
-                      <FontAwesomeIcon icon={skill.icon} className="size-4" />
-                    )}
-                    {skill.name}
-                  </Badge>
-                ))}
-              </div>
+              <StackSection />
             </BlurFade>
           </div>
         </section>
@@ -256,7 +254,6 @@ export default function Page() {
                   delay={BLUR_FADE_DELAY * 11.5 + id * 0.05}
                 >
                   <ResumeCard
-                    logoUrl={work.logoUrl}
                     altText={work.company}
                     title={work.company}
                     subtitle={work.title}
@@ -272,21 +269,43 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ─── X ─── */}
-        <section id="x-activity">
-          <BlurFade delay={BLUR_FADE_DELAY * 12}>
-            <XActivity />
-          </BlurFade>
+        {/* ─── ACHIEVEMENTS ─── */}
+        <section id="achievements">
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <BlurFade delay={BLUR_FADE_DELAY * 11.5}>
+              <SectionLabel label="Milestones" />
+              <h2 className="mt-1.5 text-xl font-bold tracking-tight">
+                Achievements
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Hackathon victories and milestones in my journey as a developer.
+              </p>
+            </BlurFade>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {DATA.hackathons.slice(0, 4).map((item, id) => (
+                <BlurFade
+                  key={item.title}
+                  delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                >
+                  <AchievementCard
+                    title={item.title}
+                    subtitle={item.organization}
+                    description={item.description}
+                  />
+                </BlurFade>
+              ))}
+            </div>
+            <BlurFade delay={BLUR_FADE_DELAY * 12.5}>
+              <Link href="/achievements" className="mt-2 block">
+                <ShinyButton className="w-full sm:w-auto group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-semibold">
+                  View All Achievements →
+                </ShinyButton>
+              </Link>
+            </BlurFade>
+          </div>
         </section>
 
-        {/* ─── LINKEDIN ─── */}
-        <section id="linkedin">
-          <BlurFade delay={BLUR_FADE_DELAY * 12.5}>
-            <LinkedInActivity />
-          </BlurFade>
-        </section>
-
-        {/* ─── GITHUB (moved down) ─── */}
+        {/* ─── GITHUB ─── */}
         <section id="contributions">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <SectionLabel label="Open Source" />
@@ -315,7 +334,7 @@ export default function Page() {
               <div className="relative z-10 flex flex-col items-center justify-center space-y-6">
                 <SectionLabel label="Contact" />
                 <p className="text-xl text-muted-foreground">
-                  Got a project or just want to chat?
+                  Want to work with me? 
                 </p>
                 <a
                   href={`mailto:${DATA.contact.email}`}

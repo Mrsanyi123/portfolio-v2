@@ -34,6 +34,10 @@ const BLUR_FADE_DELAY = 0.04;
 export function VideosList({ videos }: VideosListProps) {
   const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
 
+  if (videos.length === 0) {
+    return null;
+  }
+
   const sortedVideos = [...videos].sort((a, b) => {
     const dateA = new Date(a.date).getTime();
     const dateB = new Date(b.date).getTime();

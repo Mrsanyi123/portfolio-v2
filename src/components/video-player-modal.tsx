@@ -18,7 +18,7 @@ function getYouTubeEmbedUrl(url: string) {
   const regExp = /^.*(?:youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/;
   const match = url.match(regExp);
   const videoId = match && match[1];
-  return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+  return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : '';
 }
 
 function isYouTubeUrl(url: string) {

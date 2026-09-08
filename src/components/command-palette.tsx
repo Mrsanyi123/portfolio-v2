@@ -8,7 +8,6 @@ import {
   HomeIcon,
   VideoIcon,
   FolderIcon,
-  MegaphoneIcon,
   MoonIcon,
   SunIcon,
   MonitorIcon,
@@ -126,18 +125,6 @@ export function CommandPalette() {
         router.push("/projects");
       },
       keywords: ["projects", "work", "portfolio"],
-      group: "Pages",
-    },
-    {
-      id: "promote",
-      label: "Promote",
-      description: "Sponsorship & partnership packages",
-      icon: <MegaphoneIcon className="size-4" />,
-      action: () => {
-        setOpen(false);
-        router.push("/promote");
-      },
-      keywords: ["promote", "sponsor", "partnership", "advertise", "collab"],
       group: "Pages",
     },
     {

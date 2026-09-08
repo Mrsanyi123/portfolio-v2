@@ -53,6 +53,23 @@ export default async function VideosPage() {
         </BlurFade>
         
         <VideosList videos={videos} />
+
+        {videos.length === 0 && (
+          <BlurFade delay={BLUR_FADE_DELAY * 2}>
+            <p className="text-center text-muted-foreground py-12">
+              No videos found. Check back soon or visit{" "}
+              <a
+                href="https://www.youtube.com/@Sanyi-Diriba"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-foreground"
+              >
+                YouTube
+              </a>
+              .
+            </p>
+          </BlurFade>
+        )}
       </section>
     </main>
   );

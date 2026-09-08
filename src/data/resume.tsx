@@ -1,5 +1,12 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, VideoIcon, FolderIcon, MegaphoneIcon } from "lucide-react";
+import {
+  HomeIcon,
+  VideoIcon,
+  FolderIcon,
+  MegaphoneIcon,
+  ActivityIcon,
+  TrophyIcon,
+} from "lucide-react";
 import {
   faReact,
   faNodeJs,
@@ -36,31 +43,120 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/addis+ababa",
   description: "",
   heroIntro: [
-    "Currently freelancing and collaborating with new people on exciting projects.",
-    "I love playing video games and share thoughts on tech here.",
-    "Here's what I think about the future of computer science.",
-    "I also enjoy touch typing in my free time, bullish on AI and future technologies.",
+    "shipping products and new stuff while in High School.",
+    "I am also a content creator with 50k audience sharing my journey and thoughts.",
+    "besides coding and building, i like playing Basketball.",
+    "I'm about 5'8, fun to speak with so i'm a cool guy.",
   ],
   summary:
     "I'm **Sanyi** — a 16-year-old developer and founder focused on turning ideas into real, impactful products. I'm driven by curiosity and a strong belief that technology can solve everyday problems at scale.\n\nI spend most of my time building, experimenting, and improving my skills — especially in AI, problem solving, and scalable systems. Beyond coding, I'm a tech content creator with a **40K+** audience on LinkedIn, YouTube, and X.\n\nCurrently building **Shiplog** and **YScroll**.",
 
   avatarUrl: "/sanyi.jpg",
-  skills: [
-    { name: "TypeScript", icon: faTypescript, category: "Languages" },
-    { name: "JavaScript", icon: faJs, category: "Languages" },
-    { name: "Python", icon: faPython, category: "Languages" },
-    { name: "React", icon: faReact, category: "Frontend" },
-    { name: "Next.js", customIcon: Icons.nextjs, category: "Frontend" },
-    { name: "TailwindCSS", icon: faTailwindCss, category: "Frontend" },
-    { name: "React Native", icon: faReact, category: "Mobile" },
-    { name: "Node.js", icon: faNodeJs, category: "Backend" },
-    { name: "FastAPI", icon: faBolt, category: "Backend" },
-    { name: "PostgreSQL", icon: faDatabase, category: "Backend" },
-    { name: "Groq AI", customIcon: Icons.claude, category: "AI" },
-    { name: "Git", icon: faGitAlt, category: "Tools" },
-    { name: "Figma", icon: faFigma, category: "Tools" },
-    { name: "Cursor", customIcon: Icons.cursor, category: "Tools" },
-    { name: "Claude", customIcon: Icons.claude, category: "Tools" },
+  stackCategories: [
+    {
+      title: "Frontend",
+      description:
+        "Interfaces, design systems, and client-side performance.",
+      skills: [
+        { name: "React", icon: faReact },
+        { name: "Next.js", customIcon: Icons.nextjs },
+        { name: "TypeScript", icon: faTypescript },
+        { name: "JavaScript", icon: faJs },
+        { name: "Tailwind CSS", icon: faTailwindCss },
+        { name: "HTML5", icon: faHtml5 },
+        { name: "CSS3", icon: faCss3Alt },
+      ],
+    },
+    {
+      title: "Backend",
+      description: "APIs, services, and scalable application logic.",
+      skills: [
+        { name: "Node.js", icon: faNodeJs },
+        { name: "Python", icon: faPython },
+        { name: "FastAPI", customIcon: Icons.fastapi },
+        { name: "Express", customIcon: Icons.express },
+        { name: "REST & HTTP", customIcon: Icons.restapi },
+      ],
+    },
+    {
+      title: "Database & data",
+      description: "Persistence, modeling, and data access layers.",
+      skills: [
+        { name: "PostgreSQL", customIcon: Icons.postgresql },
+        { name: "MongoDB", customIcon: Icons.mongodb },
+        { name: "Redis", customIcon: Icons.redis },
+        { name: "Prisma", customIcon: Icons.prisma },
+      ],
+    },
+    {
+      title: "Tools & platforms",
+      description: "Shipping, collaboration, and day-to-day workflow.",
+      skills: [
+        { name: "Git", icon: faGitAlt },
+        { name: "Docker", customIcon: Icons.docker },
+        { name: "GitHub Actions", customIcon: Icons.githubActions },
+        { name: "Vercel", customIcon: Icons.vercel },
+        { name: "Figma", icon: faFigma },
+        { name: "VS Code", customIcon: Icons.vscode },
+      ],
+    },
+  ],
+  hackathons: [
+    {
+      title: "Young Changemaker of the Year Winner",
+      organization: "Linkedin Ethiopia",
+      description:
+        "Won the Young Changemaker of the Year award in Ethiopia, recognized for my impact and leadership in the tech community.",
+    },
+    {
+      title: "1st Place Winner",
+      organization: "Addis Teen Code Hackathon by ALX",
+      description:
+        "Achieved first place with my team in this prestigious hackathon competition.",
+    },
+    {
+      title: "2nd Place Winner",
+      organization: "Cursor AI Hackathon",
+      description:
+        "Achieved second place with my team in the biggest hackathon in Ethiopia, Cursor AI Hackathon.",
+    },
+ 
+    {
+      title: "3rd Place Winner",
+      organization: "Tech Titans Hack Fest",
+      description:
+        "Secured third place in online hackathon with an innovative AI project.",
+    },
+    {
+      title: "Best Beginner Project",
+      organization: "FutureHacks 7",
+      description:
+        "Won Best Beginner Project from Senior Category, showcasing exceptional potential.",
+    },
+    {
+      title: "Quarter Finals",
+      organization: "A2SV AI For Impact Hackathon",
+      description:
+        "Reached quarter finals with my team, ranking in top 200 from 600 teams.",
+    },
+  ],
+  certifications: [
+    {
+      title: "Web Development",
+      issuer: "FreeCodeCamp",
+    },
+    {
+      title: "Python Intermediate",
+      issuer: "SoloLearn",
+    },
+    {
+      title: "Data Structures & Algorithms",
+      issuer: "A2SV",
+    },
+    {
+      title: "Full-Stack Development",
+      issuer: "Personal Projects",
+    },
   ],
   linkedInPosts: [
     "urn:li:ugcPost:7429205991805755392",
@@ -157,7 +253,8 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/videos", icon: VideoIcon, label: "Videos" },
     { href: "/projects", icon: FolderIcon, label: "Projects" },
-    { href: "/promote", icon: MegaphoneIcon, label: "Promote" },
+    { href: "/activity", icon: ActivityIcon, label: "Activity" },
+    { href: "/achievements", icon: TrophyIcon, label: "Achievements" },
   ],
   partnerships: {
     intro:
@@ -229,7 +326,7 @@ export const DATA = {
     ],
   },
   contact: {
-    email: "hello@sanyi.dev",
+    email: "business.sanyi@gmail.com",
     social: {
       GitHub: {
         name: "GitHub",
@@ -251,7 +348,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "mailto:hello@sanyi.dev",
+        url: "mailto:business.sanyi@gmail.com",
         icon: Icons.email,
         navbar: false,
       },
@@ -271,6 +368,30 @@ export const DATA = {
         "You ship the features, we write your changelog. Building a product that helps teams ship faster with automated, polished release notes.",
     },
     {
+      company: "A2SV(African 2 Silcon Valley)",
+      href: "https://a2sv.org",
+      badges: [],
+      location: "Addis Ababa, Ethiopia",
+      title: "Software Engineer Traine",
+      logoUrl: "/freelance.webp",
+      start: "2023",
+      end: "Present",
+      description:
+        "Building and shipping products across web, mobile, and browser extensions — from AI study tools to apps that help people reclaim their time.",
+    },
+    {
+      company: "YScroll",
+      href: "https://yscroll.xyz",
+      badges: [],
+      location: "Addis Ababa, Ethiopia",
+      title: "Founder Developer",
+      logoUrl: "/freelance.webp",
+      start: "2023",
+      end: "Present",
+      description:
+        "Building and shipping products across web, mobile, and browser extensions — from AI study tools to apps that help people reclaim their time.",
+    },
+    {
       company: "Go2Code",
       badges: ["Co-Founder"],
       location: "Remote",
@@ -281,18 +402,6 @@ export const DATA = {
       description:
         "Co-founded a tech education platform connecting learners with expert developers. Mentored and trained 700+ interns worldwide in full-stack web development, led 50+ live workshops, and helped 2,000+ learners across 25+ countries.",
     },
-    {
-      company: "Independent Developer",
-      href: "https://github.com/mrsanyi123",
-      badges: [],
-      location: "Addis Ababa, Ethiopia",
-      title: "Full Stack Developer",
-      logoUrl: "/freelance.webp",
-      start: "2023",
-      end: "Present",
-      description:
-        "Building and shipping products across web, mobile, and browser extensions — from AI study tools to apps that help people reclaim their time.",
-    },
   ],
   projects: [
     {
@@ -301,7 +410,7 @@ export const DATA = {
       dates: "June 2026 - Present",
       active: true,
       description:
-        "A changelog platform for modern teams — you ship the features, Shiplog writes the release notes. Built to help founders and developers communicate product updates clearly.",
+        "A changelog platform for modern teams — you ship the features, Shiplog writes the release notes.",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -320,52 +429,36 @@ export const DATA = {
     },
     {
       title: "YScroll",
-      href: "https://sanyi.vercel.app",
+      href: "https://yscroll.xyz",
       dates: "2025 - Present",
       active: true,
       description:
-        "An app designed to help people reduce time spent on short-form content like TikTok, YouTube Shorts, Instagram Reels, and X. Reached 3,000+ installs within the first two weeks of launch.",
+        "An app designed to help people reduce time spent on short-form content like TikTok, YouTube Shorts, Instagram Reels, and X.",
       technologies: ["React", "TypeScript", "Mobile", "Product Design"],
-      image: "/portfolio.png",
+      video: "https://www.youtube.com/watch?v=JYcwCC1zIG0",
       links: [
         {
           type: "Website",
-          href: "https://sanyi.vercel.app",
+          href: "https://yscroll.xyz",
           icon: <Icons.globe className="size-3" />,
         },
       ],
     },
-    {
-      title: "YScroll Mobile",
-      href: "https://sanyi.vercel.app",
-      dates: "2026 - Present",
-      active: true,
-      description:
-        "Native-feel mobile experience for YScroll: smooth scrolling, saved sessions, and offline-friendly reading flows.",
-      technologies: ["React Native", "TypeScript", "Mobile", "YScroll"],
-      image: "/sanyi.jpg",
-      links: [
-        {
-          type: "Website",
-          href: "https://sanyi.vercel.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-    },
+
     {
       title: "YScroll Chrome Extension",
-      href: "https://sanyi.vercel.app",
+      href: "https://yscroll.xyz",
       dates: "2026 - Present",
       active: true,
       description:
-        "Browser extension that brings YScroll features into any tab — quick capture, sync with the app, and a lightweight UI.",
+        "Browser extension that is built to reduce time spent on short form contents like Tiktok, Youtube Shorts, Linkedin and more platforms on Browser.",
       technologies: [
         "Chrome Extension",
         "JavaScript",
         "Web Extensions",
         "YScroll",
       ],
-      image: "/freelance.webp",
+      banner: "extension",
       links: [
         {
           type: "Website",
@@ -373,6 +466,16 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
+    },
+    {
+      title: "Go2Cod Platform",
+      href: "https://go2cod.com",
+      dates: "2024 - Present",
+      active: true,
+      description:
+        "Co-Founded Go2Cod Non-profit org. to help young coders, inovators apply their skills to real world projects.",
+      technologies: ["Next.js", "JavaScript", "UI/UX", "Figma", "Performance"],
+      banner: "education",
     },
     {
       title: "AI Study Assistant",
@@ -382,14 +485,7 @@ export const DATA = {
       description:
         "Intelligent platform generating study notes, quizzes, and flashcards from user materials using AI.",
       technologies: ["React", "Python", "FastAPI", "Groq AI", "Tailwind"],
-      image: "/company.png",
-      links: [
-        {
-          type: "Website",
-          href: "https://sanyi.vercel.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
+      banner: "ai",
     },
     {
       title: "PinShot",
@@ -399,28 +495,11 @@ export const DATA = {
       description:
         "A visual feedback tool for teams and creators. Scaled to 900+ users and generated 1,400+ comments within two weeks of launch.",
       technologies: ["React", "TypeScript", "UI/UX", "Product"],
-      image: "/freelance.webp",
+      banner: "feedback",
       links: [
         {
           type: "Website",
           href: "https://sanyi.vercel.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-    },
-    {
-      title: "Go2Code Platform",
-      href: "https://go2cod.com",
-      dates: "2024 - Present",
-      active: true,
-      description:
-        "Tech education platform connecting learners with expert developers and courses.",
-      technologies: ["Next.js", "JavaScript", "UI/UX", "Figma", "Performance"],
-      image: "/company.png",
-      links: [
-        {
-          type: "Website",
-          href: "https://go2cod.com",
           icon: <Icons.globe className="size-3" />,
         },
       ],

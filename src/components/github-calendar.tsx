@@ -1,20 +1,44 @@
 "use client";
 
 import React from "react";
-import GitHubCalendar from "react-github-calendar";
+import ActivityCalendar, { Skeleton } from "react-activity-calendar";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
+interface ContributionDay {
+  date: string;
+  count: number;
+  level: number;
+}
+
+interface ContributionsResponse {
+  contributions: ContributionDay[];
+  total: { lastYear: number };
+}
+
 export function GithubContributions() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  const [data, setData] = React.useState<ContributionsResponse | null>(null);
+  const [error, setError] = React.useState(false);
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Fixed container height to prevent layout shift
+  React.useEffect(() => {
+    if (!mounted) return;
+
+    fetch("/api/github-contributions", { cache: "no-store" })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch");
+        return res.json();
+      })
+      .then(setData)
+      .catch(() => setError(true));
+  }, [mounted]);
+
   const containerHeight = "min-h-[200px]";
 
   return (
@@ -36,19 +60,28 @@ export function GithubContributions() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        {!mounted ? (
-          <div className="w-full h-[160px] rounded-lg bg-muted/50 animate-pulse" />
+        {!mounted || (!data && !error) ? (
+          <Skeleton loading />
+        ) : error || !data ? (
+          <p className="p-4 text-sm text-muted-foreground">
+            Unable to load GitHub contributions right now.
+          </p>
         ) : (
           <div className="overflow-x-auto p-4 -mx-1">
-            <GitHubCalendar
-              username="mrsanyi123"
-              colorScheme={resolvedTheme as "light" | "dark"}
+            <ActivityCalendar
+              data={data.contributions}
+              colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
               fontSize={12}
               blockSize={12}
               blockMargin={4}
+              maxLevel={4}
+              totalCount={data.total.lastYear}
+              labels={{
+                totalCount: "{{count}} contributions in the last year",
+              }}
               theme={{
-                dark: ["#161b22", "#3a3f47", "#6b7280", "#b0b8c4", "#e5e7eb"],
-                light: ["#ebedf0", "#9ca3af", "#6b7280", "#4b5563", "#374151"],
+                dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+                light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
               }}
             />
           </div>

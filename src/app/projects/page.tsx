@@ -7,20 +7,29 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Products and projects built by Sanyi — Shiplog, YScroll, AI Study Assistant, Go2Code, and more.",
+  description:
+    "Products and projects built by Sanyi — Shiplog, YScroll, AI Study Assistant, Go2Cod, and more.",
   alternates: {
     canonical: `${DATA.url}/projects`,
   },
   openGraph: {
     title: "Projects | Sanyi",
-    description: "Products and projects built by Sanyi — Shiplog, YScroll, AI Study Assistant, Go2Code, and more.",
+    description:
+      "Products and projects built by Sanyi — Shiplog, YScroll, AI Study Assistant, Go2Cod, and more.",
     url: `${DATA.url}/projects`,
-    images: [{ url: `${DATA.url}/api/og?title=Projects&type=page`, width: 1200, height: 630 }],
+    images: [
+      {
+        url: `${DATA.url}/api/og?title=Projects&type=page`,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Projects | Sanyi",
-    description: "Products and projects built by Sanyi — Shiplog, YScroll, AI Study Assistant, Go2Code, and more.",
+    description:
+      "Products and projects built by Sanyi — Shiplog, YScroll, AI Study Assistant, Go2Code, and more.",
     images: [`${DATA.url}/api/og?title=Projects&type=page`],
   },
 };

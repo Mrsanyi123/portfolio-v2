@@ -23,7 +23,9 @@ export function PersonSchema() {
             addressCountry: "Ethiopia"
           },
           email: DATA.contact.email,
-          knowsAbout: DATA.skills.map((s) => s.name),
+          knowsAbout: DATA.stackCategories.flatMap((category) =>
+            category.skills.map((skill) => skill.name),
+          ),
         })
       }}
     />

@@ -36,6 +36,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/activity`,
+      lastModified: getFileModDate('src/app/activity/page.tsx'),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/achievements`,
+      lastModified: getFileModDate('src/app/achievements/page.tsx'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/promote`,
       lastModified: getFileModDate('src/app/promote/page.tsx'),
       changeFrequency: 'monthly',

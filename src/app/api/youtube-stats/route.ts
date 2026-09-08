@@ -1,14 +1,26 @@
 import { NextResponse } from "next/server";
 
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
-const YOUTUBE_CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
+const YOUTUBE_CHANNEL_ID =
+  process.env.YOUTUBE_CHANNEL_ID ?? "UCDzaFsQJzkL5606KlsfbKQg";
 const CACHE_MAX_AGE = 3600;
 
 export async function GET() {
-  if (!YOUTUBE_API_KEY || !YOUTUBE_CHANNEL_ID) {
+  if (!YOUTUBE_API_KEY) {
     return NextResponse.json(
-      { error: "YouTube API not configured" },
-      { status: 500 }
+      {
+        name: "Sanyi Diriba",
+        avatar: "/sanyi.jpg",
+        description: "Developer & content creator on YouTube",
+        subscribers: 6600,
+        views: 150000,
+        videos: 0,
+      },
+      {
+        headers: {
+          "Cache-Control": `public, s-maxage=${CACHE_MAX_AGE}, stale-while-revalidate=600`,
+        },
+      },
     );
   }
 

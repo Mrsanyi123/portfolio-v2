@@ -10,7 +10,7 @@ import Link from "next/link";
 import React from "react";
 
 interface ResumeCardProps {
-  logoUrl: string;
+  logoUrl?: string;
   altText: string;
   title: string;
   subtitle?: string;
@@ -47,20 +47,29 @@ export const ResumeCard = ({
       onClick={handleClick}
     >
       <Card className="flex border-border/60 bg-card/40">
-        <div className="flex-none">
-          <Avatar className={cn(
-            "border size-12 m-auto bg-muted-background dark:bg-foreground",
-            redacted && "rounded-lg"
-          )}>
-            <AvatarImage
-              src={logoUrl}
-              alt={altText}
-              className={cn("object-contain", redacted && "scale-75")}
-            />
-            <AvatarFallback>{altText[0]}</AvatarFallback>
-          </Avatar>
-        </div>
-        <div className="group ml-4 flex flex-grow flex-col items-center">
+        {logoUrl && (
+          <div className="flex-none">
+            <Avatar
+              className={cn(
+                "border size-12 m-auto bg-muted-background dark:bg-foreground",
+                redacted && "rounded-lg",
+              )}
+            >
+              <AvatarImage
+                src={logoUrl}
+                alt={altText}
+                className={cn("object-contain", redacted && "scale-75")}
+              />
+              <AvatarFallback>{altText[0]}</AvatarFallback>
+            </Avatar>
+          </div>
+        )}
+        <div
+          className={cn(
+            "group flex flex-grow flex-col items-center",
+            logoUrl ? "ml-4" : "",
+          )}
+        >
           <CardHeader className="w-full px-0 py-3">
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm gap-x-2">

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const calculateYears = () => {
-  const birthDate = new Date("2009-09-08T00:00:00");
+  const birthDate = new Date("2009-09-26T00:00:00");
   const now = new Date();
   const ageInYears =
     (now.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
