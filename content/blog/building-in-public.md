@@ -8,7 +8,7 @@ published: true
 
 I grew up watching people build on the internet from San Francisco, London, Lagos, Bangalore. For a long time it felt like a place I could watch, not a place I could stand in.
 
-Then I started posting the work. Not the highlight reel — the actual building. That changed more than any tutorial.
+Then I started posting the work. Not the highlight reel ΓÇö the actual building. That changed more than any tutorial.
 
 ## Context is a feature
 

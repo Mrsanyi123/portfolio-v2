@@ -6,6 +6,7 @@ import {
   MegaphoneIcon,
   ActivityIcon,
   TrophyIcon,
+  BookOpenIcon,
 } from "lucide-react";
 import {
   faReact,
@@ -251,6 +252,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/blog", icon: BookOpenIcon, label: "Blog" },
     { href: "/videos", icon: VideoIcon, label: "Videos" },
     { href: "/projects", icon: FolderIcon, label: "Projects" },
     { href: "/activity", icon: ActivityIcon, label: "Activity" },
