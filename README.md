@@ -23,6 +23,6 @@ Optional environment variables are documented in `.env.example`.
 
 ## Contact
 
-Sanyi Diriba — [@imsanyidiriba](https://x.com/imsanyidiriba)
+Sanyi Diriba — [@imsanyi](https://x.com/imsanyi)
 
-Live site: [sanyi.dev](https://sanyi.dev)
+Live site: [sanyi.space](https://sanyi.space)
