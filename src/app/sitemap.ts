@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { DATA } from "@/data/resume";
+import { getBlogPosts } from "@/lib/blog";
 import fs from 'fs';
 import path from 'path';
 
@@ -16,6 +17,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   };
 
+  const blogPosts = getBlogPosts().map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -23,6 +31,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: getFileModDate('src/app/blog/page.tsx'),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    ...blogPosts,
     {
       url: `${baseUrl}/videos`,
       lastModified: getFileModDate('src/app/videos/page.tsx'),
