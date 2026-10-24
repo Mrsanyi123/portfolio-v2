@@ -329,6 +329,16 @@ export const DATA = {
   },
   contact: {
     email: "business.sanyi@gmail.com",
+    openToWork: {
+      label: "Open to work",
+      handle: "@imsanyi",
+      url: "https://x.com/imsanyi",
+    },
+    support: {
+      label: "Support my work",
+      handle: "@sanyidiriba",
+      url: "https://buymeacoffee.com/sanyidiriba",
+    },
     social: {
       GitHub: {
         name: "GitHub",

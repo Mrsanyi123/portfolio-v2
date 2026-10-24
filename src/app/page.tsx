@@ -18,6 +18,7 @@ import ShinyButton from "@/components/ui/shiny-button";
 import { GithubSkeleton } from "@/components/skeletons/github-skeleton";
 import { AgeCounter } from "@/components/age-counter";
 import { FlipAvatar } from "@/components/flip-avatar";
+import { HeroCalls } from "@/components/hero-calls";
 import { GitHubHoverCard } from "@/components/github-hover-card";
 import { XHoverCard } from "@/components/x-hover-card";
 import { LinkedInHoverCard } from "@/components/linkedin-hover-card";
@@ -180,13 +181,16 @@ export default function Page() {
               </div>
 
               <BlurFade delay={BLUR_FADE_DELAY * 0.8} className="shrink-0 self-center sm:self-auto">
-                <div className="profile-wrapper">
-                  <FlipAvatar
-                    src={DATA.avatarUrl}
-                    hoverSrc="/sanyi1.jpg"
-                    alt={DATA.name}
-                    fallback={DATA.initials}
-                  />
+                <div className="flex flex-col items-center">
+                  <div className="profile-wrapper">
+                    <FlipAvatar
+                      src={DATA.avatarUrl}
+                      hoverSrc="/sanyi1.jpg"
+                      alt={DATA.name}
+                      fallback={DATA.initials}
+                    />
+                  </div>
+                  <HeroCalls className="relative z-10 -mt-3.5" />
                 </div>
               </BlurFade>
             </div>
